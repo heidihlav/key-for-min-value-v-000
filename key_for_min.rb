@@ -3,11 +3,13 @@
 #value
 
 def key_for_min_value(hash)
-  hash.collect do |name, number|
-    if hash[number] < hash[number]
-      name
-    else
-      nil
+  lowest_key = nil
+  lowest_value = 0
+  hash.each do |name, number|
+    if number < lowest_value
+      lowest_value = number
+      lowest_key = name
+    end
   end
-end
+    lowest_key
 end
