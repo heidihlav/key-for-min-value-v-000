@@ -4,8 +4,8 @@
 
 def key_for_min_value(hash)
   hash.collect do |name, number|
-    if small = number <=> number
-      puts name
+    if hash[number] < hash[number]
+      name
     else
       nil
   end
